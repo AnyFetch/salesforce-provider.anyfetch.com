@@ -1,0 +1,46 @@
+{
+  "name": "anyfetch-provider-salesforce",
+  "version": "0.1.0",
+  "author": "Dartus Pierre-Marie <dartus.pierremarie@gmail.com>",
+  "contributors": [
+    {
+      "name": "Matthieu Bacconnier ",
+      "email": "matthieu.bacconnier@papiel.fr"
+    }
+  ],
+  "bin": {
+    "server": "./bin/server"
+  },
+  "scripts": {
+    "start": "node ./bin/server",
+    "upload": "node ./bin/upload",
+    "test": "NODE_ENV=test mocha -R spec -t 50000000",
+    "lint": "jshint lib/ test/ config/ bin/"
+  },
+  "main": "./lib/provider-salesforce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Papiel/provider-dropbox"
+  },
+  "keywords": [
+    "anyFetch",
+    "provider",
+    "salesforce"
+  ],
+  "dependencies": {
+    "async": "0.2.x",
+    "request": "2.26.x",
+    "cluestr-provider": "0.x.x",
+    "sspawn": "0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "1.11.x",
+    "should": "1.2.x",
+    "supertest": "0.7.x",
+    "jshint": "2.1.x"
+  },
+  "licence": "Copyright Papiel",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
