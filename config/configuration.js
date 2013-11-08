@@ -35,7 +35,7 @@ module.exports = {
 
   salesforce_org: org,
   salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
-  salesforce_connect: org.getAuthUri(),
+  salesforce_connect: process.env.SALESFORCE_CONNECT_URL,
 
   cluestr_id: process.env.SALESFORCE_CLUESTR_ID,
   cluestr_secret: process.env.SALESFORCE_CLUESTR_SECRET,
