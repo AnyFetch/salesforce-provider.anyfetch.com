@@ -4,3 +4,12 @@ node_js:
 - '0.10'
 before_script: npm install --dev
 script: npm test
+env:
+  global:
+  - secure: YyWmc2WiRcpvyjAVz2fsOlQ+C/oW4nIVF2a+H3phI9dO1D8+MC9QH+utliD9E49ykKsXuoHzsTSiL7CRiwd8qGh9bKDsaU2MgnddHxdXufhVmR07Sg21dkCjR4FmV8RSLUfYyn03yqhK9y0xGSnzThzvhFu4qHjYM+6OYCRkTO0=
+  - secure: IbLlQRECFlEvUQf0ZM5St8RCc5ULPzWwn9arXNonJyxp1p90OCcdqh9qqwzPKOnYIOlDwV9RdOI2Hg4RtCyZPaqrUOeHu66ihtTwgxqSRPZyPg7v4+4ET7O8WZrMByedsDnIARAea+YplD4vHYbSjzYCZbwD5gyMZyQ84weci8Q=
+  - secure: Qq+BiGie4GPrr2+Bg3g4II/TQQPv0IURCF3N8cYHf8sM7XTuyGCDBmMoeuSaogq6pNd5J443z5ekLUPT1BZHdZoIDVAEQDI9x21I0MNaySmBtpJT5+53b2jZ3ku60VGiqGv0KPQRj0CceHfYigSZfBOYNjUYqf4LwWp2humVuSQ=
+  - secure: SH8cc/8t31720tetsh73oTLWFsIHCGY0q1JwfGjaSCIJeoBlxwzUl+rkkxlBRip2XhtZuy/+Qmi3vdRhFOYLimi4Bu2HSHMv0RH1VFUakrC4Ivi9WLzz9LGHw8VW7vz6uv2P5ZSUP4wT/DZ1Mv2eM9R9+IOhpggMbJ0KCoYOY6g=
+  - SALESFORCE_CONNECT_URL="http://localhost:8000/init/connect"
+  - SALESFORCE_CALLBACK_URL="http://localhost:8000/init/callback"
+  - SALESFORCE_MAX_CONCURRENCY="5"
