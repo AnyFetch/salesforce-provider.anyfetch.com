@@ -31,6 +31,6 @@ module.exports = {
   cluestr_id: process.env.SALESFORCE_CLUESTR_ID,
   cluestr_secret: process.env.SALESFORCE_CLUESTR_SECRET,
 
-  max_concurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 5,
+  max_concurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 1,
   workers: process.env.WORKERS || 2,
 };
