@@ -22,7 +22,7 @@ if(node_env === "production") {
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  mongo_url: process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
+  mongo_url: process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
 
   salesforce_org: salesforceApp,
   salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
