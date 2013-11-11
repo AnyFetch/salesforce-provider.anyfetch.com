@@ -6,6 +6,7 @@
  */
 
 var salesforceApp = require('./salesforce_app.js');
+var mongoose = require('mongoose');
 
 // node_env can either be "development" or "production"
 var node_env = process.env.NODE_ENV || "development";
@@ -15,17 +16,16 @@ var node_env = process.env.NODE_ENV || "development";
 // 80 for production
 var default_port = 8000;
 if(node_env === "production") {
-  default_port = 80;
+  default_port = 5000;
 }
 
-var mongo = process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env);
-console.log(mongo)
+
 
 // Exports configuration for use by app.js
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  mongo_url: mongo,
+  mongo_url: process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
 
   salesforce_org: salesforceApp,
   salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
