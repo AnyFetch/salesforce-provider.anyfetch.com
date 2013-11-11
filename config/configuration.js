@@ -18,11 +18,14 @@ if(node_env === "production") {
   default_port = 80;
 }
 
+var mongo = process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env);
+console.log(mongo)
+
 // Exports configuration for use by app.js
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  mongo_url: process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
+  mongo_url: mongo,
 
   salesforce_org: salesforceApp,
   salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
