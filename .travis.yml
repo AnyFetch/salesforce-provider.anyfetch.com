@@ -14,3 +14,10 @@ env:
   - SALESFORCE_CONNECT_URL="http://localhost:8000/init/connect"
   - SALESFORCE_CALLBACK_URL="http://localhost:8000/init/callback"
   - SALESFORCE_MAX_CONCURRENCY="5"
+deploy:
+  provider: heroku
+  api_key:
+    secure: UZArKNf/wpF7lh/uyc1D/AF5VIr8cM8UH5ErzLUpYp8P+apcY8IOL8dR94bjcKi9RzunOEKSb1xF8P5C2PnzOY11YsJ0VO5Xt2qyIbS96EnCgcDGxK37ii823KoDBLo2Jf2IgHyIuc5h9ocaH1X6/byEaLAIv1wfCtQ3WgjP7fE=
+  app: provider-salesforce
+  on:
+    repo: Papiel/provider-salesforce

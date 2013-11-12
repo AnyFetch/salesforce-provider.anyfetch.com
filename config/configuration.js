@@ -6,6 +6,7 @@
  */
 
 var salesforceApp = require('./salesforce_app.js');
+var mongoose = require('mongoose');
 
 // node_env can either be "development" or "production"
 var node_env = process.env.NODE_ENV || "development";
@@ -15,14 +16,16 @@ var node_env = process.env.NODE_ENV || "development";
 // 80 for production
 var default_port = 8000;
 if(node_env === "production") {
-  default_port = 80;
+  default_port = 5000;
 }
+
+
 
 // Exports configuration for use by app.js
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  mongo_url: process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
+  mongo_url: process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
 
   salesforce_org: salesforceApp,
   salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
@@ -31,6 +34,6 @@ module.exports = {
   cluestr_id: process.env.SALESFORCE_CLUESTR_ID,
   cluestr_secret: process.env.SALESFORCE_CLUESTR_SECRET,
 
-  max_concurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 5,
+  max_concurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 1,
   workers: process.env.WORKERS || 2,
 };
