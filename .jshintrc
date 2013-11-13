@@ -13,7 +13,7 @@
 	undef: true,
 	strict: true,
 	trailing: true,
-	unused: true,
+	unused: false,
 	loopfunc: true,
 	asi: false,
 	boss: false,
@@ -22,15 +22,15 @@
 	es5: false,
 	esnext: false,
 	evil: false,
-	expr: false,
+	expr: true,
 	forin: false,
 	funcscope: false,
-	quotmark: false,
 	globalstrict: false,
 	iterator: false,
 	lastsemic: false,
 	laxbreak: false,
 	laxcomma: false,
+	quotmark: false,
 	multistr: false,
 	onecase: false,
 	proto: false,
@@ -58,13 +58,13 @@
 	white: false,
 	maxerr: 100,
 	predef: [
-		"describe",
-		"it",
-		"after",
-		"before",
-		"beforeEach"
+	"describe",
+	"it",
+	"after",
+	"before",
+	"beforeEach"
 	],
 	indent: 2,
-	maxstatements: 20,
-	maxcomplexity: 10
+	maxstatements: 40,
+maxcomplexity: 10
 }
