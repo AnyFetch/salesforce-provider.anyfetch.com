@@ -13,9 +13,9 @@ var oauth = {
 };
 
 
-describe("Retrieve tokens", function () { 
+describe('Retrieve tokens', function () {
 
-  it("should get an updated refresh_token", function(done) {
+  it('should get an updated refresh_token', function(done) {
     org.refreshToken(oauth, function(err, tokens) {
       tokens.should.have.property('access_token');
       done();
@@ -24,7 +24,7 @@ describe("Retrieve tokens", function () {
 
 });
 
-describe("Retrieve with getColumns", function() {
+describe('Retrieve', function() {
   var newAuth = {};
   before(function(done) {
     org.refreshToken(oauth, function(err, tokens) {
@@ -44,6 +44,14 @@ describe("Retrieve with getColumns", function() {
   it('should retrive the name of the company for a contact', function(done) {
     retrieve.getColumns(newAuth, 'Contact', function(err, res) {
       res.should.include('Account.name');
+      done(err);
+    });
+  });
+
+  it('should retrieve all the contacts', function(done) {
+    retrieve.retrieveFromType(newAuth, 'Contact', function(err, res){
+      res.length.should.be.equal(20);
+      res[0].attributes.type.should.be.equal('Contact');
       done(err);
     });
   });
