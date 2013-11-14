@@ -24,7 +24,7 @@ describe("Retrieve tokens", function () {
 
 });
 
-describe("getColumns", function() {
+describe("Retrieve with getColumns", function() {
   var newAuth = {};
   before(function(done) {
     org.refreshToken(oauth, function(err, tokens) {
