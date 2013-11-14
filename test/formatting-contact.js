@@ -45,6 +45,7 @@ describe('Contact formatting', function () {
       // Test quantity of keys
       res.metadatas.phone.length.should.be.equal(3);
       res.metadatas.email.length.should.be.equal(1);
+      res.metadatas.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
       res.should.ownProperty('identifier');
 
       done(err);

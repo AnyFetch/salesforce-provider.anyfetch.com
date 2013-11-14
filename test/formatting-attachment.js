@@ -2,7 +2,7 @@
 
 var sharedFormat = require('./shared');
 
-module.exports = function(lead, oauth, cb) {
+module.exports = function(attachment, oauth, cb) {
   var metadatas = {};
 
   // General informations
