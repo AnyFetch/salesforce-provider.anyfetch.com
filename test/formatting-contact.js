@@ -45,7 +45,7 @@ describe('Contact formatting', function () {
       // Test quantity of keys
       res.metadatas.phone.length.should.be.equal(3);
       res.metadatas.email.length.should.be.equal(1);
-      res.metadatas.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
+      res.semantic_document_type.should.be.equal('contact');
       res.should.ownProperty('identifier');
 
       done(err);
@@ -59,6 +59,7 @@ describe('Contact formatting', function () {
       metadatas.jobTitle.should.be.equal('SVP, Administration and Finance');
       metadatas.workFor.should.be.equal('Pyramid Construction Inc.');
       metadatas.name.should.be.equal('Pat Stumuller');
+      metadatas.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
       metadatas.email[0].email.should.be.equal('pat@pyramid.net');
 
       done(err);

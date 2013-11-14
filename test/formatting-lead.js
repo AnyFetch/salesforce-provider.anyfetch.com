@@ -38,7 +38,7 @@ describe('Lead formatting', function () {
       // Test quantity of keys
       res.metadatas.phone.length.should.be.equal(1);
       res.metadatas.email.length.should.be.equal(1);
-
+      res.semantic_document_type.should.be.equal('contact');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/00Qb0000005rAkmEAE');
 
       done(err);
@@ -53,6 +53,7 @@ describe('Lead formatting', function () {
       metadatas.workFor.should.be.equal('Blues Entertainment Corp.');
       metadatas.name.should.be.equal('David Monaco');
       metadatas.email[0].email.should.be.equal('david@blues.com');
+
       metadatas.address.should.be.equal('Japan');
 
       done(err);
