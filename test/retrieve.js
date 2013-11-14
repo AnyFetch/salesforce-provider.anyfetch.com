@@ -59,6 +59,7 @@ describe('Retrieve', function() {
   it('should retrive all the attachements', function(done) {
     retrieve.retrieveAttachements(newAuth, function(err, res) {
       res.length.should.be.equal(0);
+      done(err);
     });
   });
 });
