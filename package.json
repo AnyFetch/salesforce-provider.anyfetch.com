@@ -14,7 +14,7 @@
   "scripts": {
     "start": "node ./bin/server",
     "upload": "node ./bin/upload",
-    "test": "NODE_ENV=test mocha -R spec -t 50000 -g formatting",
+    "test": "NODE_ENV=test mocha -R spec -t 50000",
     "lint": "jshint lib/ test/ config/ bin/"
   },
   "main": "./lib/provider-salesforce",
