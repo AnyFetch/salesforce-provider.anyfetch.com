@@ -65,5 +65,4 @@ describe('Contact formatting', function () {
       done(err);
     });
   });
-
 });
