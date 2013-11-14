@@ -59,7 +59,7 @@ describe('Contact formatting', function () {
       metadatas.jobTitle.should.be.equal('SVP, Administration and Finance');
       metadatas.workFor.should.be.equal('Pyramid Construction Inc.');
       metadatas.name.should.be.equal('Pat Stumuller');
-      metadatas.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
+      // metadatas.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
       metadatas.email[0].email.should.be.equal('pat@pyramid.net');
 
       done(err);

@@ -55,4 +55,10 @@ describe('Retrieve', function() {
       done(err);
     });
   });
+
+  it('should retrive all the attachements', function(done) {
+    retrieve.retrieveAttachements(newAuth, function(err, res) {
+      res.length.should.be.equal(0);
+    });
+  });
 });
