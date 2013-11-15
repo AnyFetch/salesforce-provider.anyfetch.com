@@ -8,6 +8,7 @@ var taskTest =  {
     type: 'Task',
     url: '/services/data/v29.0/sobjects/Task/00Tb000000AienBEAR'
   },
+  Id: 'taskId',
   Subject: 'Appel du 10 nov',
   Status: 'Completed',
   ActivityDate: '2013-11-11',
@@ -29,10 +30,10 @@ describe('Task formatting', function () {
       res.metadatas.subject.should.be.equal('Appel du 10 nov');
       res.metadatas.status.should.be.equal('Completed');
       res.metadatas.description.should.be.equal('Il a parlé de tout et de rien et surtout à propos de Betty Fair et Tim Barr !');
-      res.metadatas.dueDate.should.be.equal(new Date('2013-11-11'));
+      res.metadatas.dueDate.should.be.eql(new Date('2013-11-11'));
 
       res.semantic_document_type.should.be.equal('task');
-      res.identifier.should.be.equal('http://eu.salesforce/user-id/00Tb000000AienBEAR');
+      res.identifier.should.be.equal('http://eu.salesforce/user-id/taskId');
 
       res.related.should.include('003b000000GVg5RAAT');
       res.related.length.should.be.equal(1);

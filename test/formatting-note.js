@@ -8,6 +8,7 @@ var noteTest = {
     type: 'Note',
     url: '/services/data/v29.0/sobjects/Note/002b0000002Sf79AAC'
   },
+  Id: 'noteId',
   Title: 'Coucou',
   Body: 'C\'est moi qui suis ici',
   ReleatedParentId: '003b000000GVg5QAAT'
@@ -28,10 +29,10 @@ describe('Note formatting', function () {
       res.metadatas.title.should.be.equal('Coucou');
       res.metadatas.text.should.be.equal('C\'est moi qui suis ici');
       res.semantic_document_type.should.be.equal('document');
-      res.identifier.should.be.equal('http://eu.salesforce/user-id/00Qb0000005rAkmEAE');
+      res.identifier.should.be.equal('http://eu.salesforce/user-id/noteId');
 
-      res.releated.should.include('003b000000GVg5QAAT');
-      res.releated.length.should.be.equal(1);
+      res.related.should.include('003b000000GVg5QAAT');
+      res.related.length.should.be.equal(1);
       done(err);
 
     });
