@@ -17,7 +17,7 @@ env:
 deploy:
   provider: heroku
   api_key:
-    secure: UZArKNf/wpF7lh/uyc1D/AF5VIr8cM8UH5ErzLUpYp8P+apcY8IOL8dR94bjcKi9RzunOEKSb1xF8P5C2PnzOY11YsJ0VO5Xt2qyIbS96EnCgcDGxK37ii823KoDBLo2Jf2IgHyIuc5h9ocaH1X6/byEaLAIv1wfCtQ3WgjP7fE=
+    secure: KAchPX+cYMnGgnB2lLq3Jw37sJMeHCgPyqKwEW93H3gd6V3mXefv3ftLE0MooXsolFmtG4OoTin60XIpKWp4lkYAix6kYTQqdn23R99Ahi14Z/3NUZU/0DZ9ZMM/04jbxvecjHC6id1GLIT0rC5SB6kWoTHT9sIsOD+LBwbVH2c=
   app: provider-salesforce
   on:
     repo: Papiel/provider-salesforce
