@@ -35,7 +35,7 @@ describe('Task formatting', function () {
       res.semantic_document_type.should.be.equal('task');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/taskId');
 
-      res.related.should.include('003b000000GVg5RAAT');
+      res.related.should.include('http://eu.salesforce/user-id/003b000000GVg5RAAT');
       res.related.length.should.be.equal(1);
       done(err);
 

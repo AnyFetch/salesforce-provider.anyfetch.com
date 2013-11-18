@@ -31,7 +31,7 @@ describe('Note formatting', function () {
       res.semantic_document_type.should.be.equal('document');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/noteId');
 
-      res.related.should.include('003b000000GVg5QAAT');
+      res.related.should.include('http://eu.salesforce/user-id/003b000000GVg5QAAT');
       res.related.length.should.be.equal(1);
       done(err);
 

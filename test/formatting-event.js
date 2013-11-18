@@ -35,7 +35,7 @@ describe('Event formatting', function () {
       res.semantic_document_type.should.be.equal('event');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/eventId');
 
-      res.related.should.include('003b000000GVg5RAAT');
+      res.related.should.include('http://eu.salesforce/user-id/003b000000GVg5RAAT');
       res.related.length.should.be.equal(1);
       done(err);
 
