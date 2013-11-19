@@ -1,7 +1,7 @@
 'use strict';
 
 // Load configuration and initialize server
-var cluestrProvider = require('cluestr-provider');
+	var cluestrProvider = require('cluestr-provider');
 var serverConfig = require('./lib/provider-salesforce');
 
 if (serverConfig.env == 'production') {
