@@ -1,5 +1,6 @@
 # Projects files
 keys.sh
+newrelic_*
 
 # OS Artifacts
 *.DS_Store

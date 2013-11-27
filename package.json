@@ -14,7 +14,7 @@
   "scripts": {
     "start": "node ./bin/server",
     "upload": "node ./bin/upload",
-    "test": "NODE_ENV=test mocha -R spec -t 2500",
+    "test": "NODE_ENV=test mocha -R spec -t 50000",
     "lint": "jshint lib/ test/ config/ bin/"
   },
   "main": "./lib/provider-salesforce",
@@ -33,7 +33,8 @@
     "cluestr-provider": "0.x.x",
     "sspawn": "0.1.1",
     "nforce": "0.6.x",
-    "mongoose": "3.6.x"
+    "mongoose": "3.6.x",
+    "newrelic": "1.x.x"
   },
   "devDependencies": {
     "mocha": "1.11.x",
