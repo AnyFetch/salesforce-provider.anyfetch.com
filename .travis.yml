@@ -18,6 +18,4 @@ deploy:
   provider: heroku
   api_key:
     secure: KAchPX+cYMnGgnB2lLq3Jw37sJMeHCgPyqKwEW93H3gd6V3mXefv3ftLE0MooXsolFmtG4OoTin60XIpKWp4lkYAix6kYTQqdn23R99Ahi14Z/3NUZU/0DZ9ZMM/04jbxvecjHC6id1GLIT0rC5SB6kWoTHT9sIsOD+LBwbVH2c=
-  app: provider-salesforce
-  on:
-    repo: Papiel/provider-salesforce
+  app: anyfetch-provider-salesforce
