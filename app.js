@@ -1,19 +1,19 @@
 'use strict';
 
 // Load configuration and initialize server
-var cluestrProvider = require('cluestr-provider');
+var anyfetchProvider = require('anyfetch-provider');
 var serverConfig = require('./lib/provider-salesforce');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/cluestr-provider');
-var Token = mongoose.model('Token', { cluestrToken: String, datas: {} });
+mongoose.connect('mongodb://localhost/anyfetch-provider');
+var Token = mongoose.model('Token', { anyfetchToken: String, datas: {} });
 
 
 if (serverConfig.env == 'production') {
   require('newrelic');
 }
 
-var server = cluestrProvider.createServer(serverConfig);
+var server = anyfetchProvider.createServer(serverConfig);
 
 server.get('/token', function(req, res, next) {
   var sfToken = req.params.sfid;
@@ -25,7 +25,7 @@ server.get('/token', function(req, res, next) {
       var id = storedTokens.datas.id.slice(storedTokens.datas.id.lastIndexOf('/') + 1);
       console.log(id);
       if (sfToken == id) {
-        anyFetchToken = storedTokens.cluestrToken;
+        anyFetchToken = storedTokens.anyfetchToken;
       }
     });
 

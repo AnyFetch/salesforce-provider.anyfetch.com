@@ -31,8 +31,8 @@ module.exports = {
   salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
   salesforce_connect: process.env.SALESFORCE_CONNECT_URL,
 
-  cluestr_id: process.env.SALESFORCE_CLUESTR_ID,
-  cluestr_secret: process.env.SALESFORCE_CLUESTR_SECRET,
+  anyfetch_id: process.env.SALESFORCE_ANYFETCH_ID,
+  anyfetch_secret: process.env.SALESFORCE_ANYFETCH_SECRET,
 
   max_concurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 1,
   workers: process.env.WORKERS || 2,
