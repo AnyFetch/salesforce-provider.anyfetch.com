@@ -1,5 +1,5 @@
 {
-  "name": "anyfetch-provider-salesforce",
+  "name": "anyfetch-salesforce-provider",
   "version": "0.1.0",
   "author": "Dartus Pierre-Marie <dartus.pierremarie@gmail.com>",
   "contributors": [
@@ -20,7 +20,7 @@
   "main": "./lib/provider-salesforce",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Papiel/provider-dropbox"
+    "url": "https://github.com/Papiel/salesforce.provider.anyfetch.com"
   },
   "keywords": [
     "anyFetch",
@@ -30,7 +30,7 @@
   "dependencies": {
     "async": "0.2.x",
     "request": "2.30.x",
-    "cluestr-provider": "0.x.x",
+    "anyfetch-provider": "0.x.x",
     "sspawn": "0.1.1",
     "nforce": "0.6.x",
     "mongoose": "3.8.x",
@@ -42,7 +42,7 @@
     "supertest": "0.8.x",
     "jshint": "2.3.x"
   },
-  "licence": "Copyright Papiel",
+  "licence": "MIT",
   "engines": {
     "node": ">=0.10"
   }
