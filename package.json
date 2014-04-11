@@ -30,11 +30,12 @@
   "dependencies": {
     "async": "0.2.x",
     "request": "2.34.x",
-    "anyfetch-provider": "0.x.x",
+    "anyfetch-provider": ">=0.3.11",
     "sspawn": "0.1.1",
     "nforce": "0.7.x",
     "mongoose": "3.8.x",
-    "newrelic": "1.x.x"
+    "newrelic": "1.x.x",
+    "jsforce": "1.1.x"
   },
   "devDependencies": {
     "mocha": "1.18.x",
