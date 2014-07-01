@@ -23,8 +23,6 @@ if(node_env === "production") {
   default_port = 5000;
 }
 
-
-
 // Exports configuration for use by app.js
 module.exports = {
   env: node_env,
