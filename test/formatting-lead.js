@@ -36,8 +36,8 @@ describe('Lead formatting', function () {
     leadFormatter(testLead, oauth, function(err, res){
 
       // Test quantity of keys
-      res.metadatas.phone.length.should.be.equal(1);
-      res.metadatas.email.length.should.be.equal(1);
+      res.metadata.phone.length.should.be.equal(1);
+      res.metadata.email.length.should.be.equal(1);
       res.semantic_document_type.should.be.equal('contact');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/00Qb0000005rAkmEAE');
 
@@ -46,15 +46,15 @@ describe('Lead formatting', function () {
     });
   });
 
-  it('should format get all the metadatas', function(done) {
+  it('should format get all the metadata', function(done) {
     leadFormatter(testLead, oauth, function(err, res){
-      var metadatas = res.metadatas;
-      metadatas.jobTitle.should.be.equal('CFO');
-      metadatas.workFor.should.be.equal('Blues Entertainment Corp.');
-      metadatas.name.should.be.equal('David Monaco');
-      metadatas.email[0].email.should.be.equal('david@blues.com');
+      var metadata = res.metadata;
+      metadata.jobTitle.should.be.equal('CFO');
+      metadata.workFor.should.be.equal('Blues Entertainment Corp.');
+      metadata.name.should.be.equal('David Monaco');
+      metadata.email[0].email.should.be.equal('david@blues.com');
 
-      metadatas.address.should.be.equal('Japan');
+      metadata.address.should.be.equal('Japan');
 
       done(err);
     });

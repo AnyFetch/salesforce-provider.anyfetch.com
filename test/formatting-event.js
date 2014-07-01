@@ -26,11 +26,11 @@ describe('Event formatting', function () {
 
   it('should return the right structure', function(done) {
     noteFormatter(eventTest, oauth, function(err, res){
-      
-      res.metadatas.startDate.should.eql(new Date('2013-11-11T20:00:00.000+0000'));
-      res.metadatas.endDate.should.eql(new Date('2013-11-11T21:00:00.000+0000'));
-      res.metadatas.name.should.be.equal('Réunion avec ce mec !');
-      res.metadatas.description.should.be.equal('La description de la réunion');
+
+      res.metadata.startDate.should.eql(new Date('2013-11-11T20:00:00.000+0000'));
+      res.metadata.endDate.should.eql(new Date('2013-11-11T21:00:00.000+0000'));
+      res.metadata.name.should.be.equal('Réunion avec ce mec !');
+      res.metadata.description.should.be.equal('La description de la réunion');
 
       res.semantic_document_type.should.be.equal('event');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/eventId');

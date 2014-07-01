@@ -43,8 +43,8 @@ describe('Contact formatting', function () {
     contactFormatter(testContact, oauth, function(err, res){
 
       // Test quantity of keys
-      res.metadatas.phone.length.should.be.equal(3);
-      res.metadatas.email.length.should.be.equal(1);
+      res.metadata.phone.length.should.be.equal(3);
+      res.metadata.email.length.should.be.equal(1);
       res.semantic_document_type.should.be.equal('contact');
       res.should.ownProperty('identifier');
 
@@ -53,14 +53,14 @@ describe('Contact formatting', function () {
     });
   });
 
-  it('should format get all the metadatas', function(done) {
+  it('should format get all the metadata', function(done) {
     contactFormatter(testContact, oauth, function(err, res){
-      var metadatas = res.metadatas;
-      metadatas.jobTitle.should.be.equal('SVP, Administration and Finance');
-      metadatas.workFor.should.be.equal('Pyramid Construction Inc.');
-      metadatas.name.should.be.equal('Pat Stumuller');
-      // metadatas.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
-      metadatas.email[0].email.should.be.equal('pat@pyramid.net');
+      var metadata = res.metadata;
+      metadata.jobTitle.should.be.equal('SVP, Administration and Finance');
+      metadata.workFor.should.be.equal('Pyramid Construction Inc.');
+      metadata.name.should.be.equal('Pat Stumuller');
+      // metadata.address.should.be.equal('2 Place Jussieu, 75251 Paris, France');
+      metadata.email[0].email.should.be.equal('pat@pyramid.net');
 
       done(err);
     });
