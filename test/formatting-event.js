@@ -32,13 +32,9 @@ describe('Event formatting', function () {
       res.metadata.name.should.be.equal('Réunion avec ce mec !');
       res.metadata.description.should.be.equal('La description de la réunion');
 
-      res.semantic_document_type.should.be.equal('event');
-      res.identifier.should.be.equal('http://eu.salesforce/user-id/eventId');
+      res.document_type.should.be.equal('event');
 
-      res.related.should.include('http://eu.salesforce/user-id/003b000000GVg5RAAT');
-      res.related.length.should.be.equal(1);
       done(err);
-
     });
   });
 });

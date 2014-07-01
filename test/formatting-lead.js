@@ -38,7 +38,7 @@ describe('Lead formatting', function () {
       // Test quantity of keys
       res.metadata.phone.length.should.be.equal(1);
       res.metadata.email.length.should.be.equal(1);
-      res.semantic_document_type.should.be.equal('contact');
+      res.document_type.should.be.equal('contact');
       res.identifier.should.be.equal('http://eu.salesforce/user-id/00Qb0000005rAkmEAE');
 
       done(err);

@@ -41,11 +41,10 @@ describe('Contact formatting', function () {
 
   it('should return the right structure', function(done) {
     contactFormatter(testContact, oauth, function(err, res){
-
       // Test quantity of keys
       res.metadata.phone.length.should.be.equal(3);
       res.metadata.email.length.should.be.equal(1);
-      res.semantic_document_type.should.be.equal('contact');
+      res.document_type.should.be.equal('contact');
       res.should.ownProperty('identifier');
 
       done(err);
