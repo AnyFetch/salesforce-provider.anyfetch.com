@@ -1,5 +1,5 @@
 # Projects files
-keys.sh
+.env
 newrelic_*
 
 # OS Artifacts
