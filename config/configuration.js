@@ -5,6 +5,10 @@
  * Most of the configuration can be done using system environment variables.
  */
 
+// Load environment variables from .env file
+var dotenv = require('dotenv');
+dotenv.load();
+
 var salesforceApp = require('./salesforce_app.js');
 var mongoose = require('mongoose');
 
