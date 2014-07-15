@@ -20,7 +20,7 @@
   "main": "./lib/provider-salesforce",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Papiel/salesforce.provider.anyfetch.com"
+    "url": "https://github.com/Papiel/salesforce-provider.anyfetch.com"
   },
   "keywords": [
     "anyFetch",
