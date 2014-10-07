@@ -28,6 +28,8 @@
     "request": "2.37.x"
   },
   "devDependencies": {
+    "sinon": "^1.10.3",
+    "anyfetch": "^2.0.4",
     "mocha": "1.20.x",
     "should": "4.0.x",
     "supertest": "0.13.x"
