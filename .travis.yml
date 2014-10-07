@@ -1,21 +1,17 @@
 language: node_js
-services: mongodb
+services:
+- mongodb
+- redis-server
 node_js:
 - '0.10'
 before_script: npm install --dev
 script: npm test
 env:
   global:
-  - secure: YyWmc2WiRcpvyjAVz2fsOlQ+C/oW4nIVF2a+H3phI9dO1D8+MC9QH+utliD9E49ykKsXuoHzsTSiL7CRiwd8qGh9bKDsaU2MgnddHxdXufhVmR07Sg21dkCjR4FmV8RSLUfYyn03yqhK9y0xGSnzThzvhFu4qHjYM+6OYCRkTO0=
-  - secure: IbLlQRECFlEvUQf0ZM5St8RCc5ULPzWwn9arXNonJyxp1p90OCcdqh9qqwzPKOnYIOlDwV9RdOI2Hg4RtCyZPaqrUOeHu66ihtTwgxqSRPZyPg7v4+4ET7O8WZrMByedsDnIARAea+YplD4vHYbSjzYCZbwD5gyMZyQ84weci8Q=
-  - SALESFORCE_ANYFETCH_ID = "anyfetch-id"
-  - SALESFORCE_ANYFETCH_SECRET = "anyfetch-secret"
-  - secure: Hr2VcZYOsCRMtIolVx2IlbWulC9M3GmLX7szJYV54RLMxH4iZ5kqfhZAKxMUH+7lZKU3k6cg9Z3JcT208IAi1yGOXEt41xfn0QOn9Lr4Q04FBWHXX+Z0cIUHjEhqXwTxyjf1HhCAqsa13ag4IcCMpR9KPRrjeEXOJ+Zf4JmW7jA=
-  - SALESFORCE_CONNECT_URL="http://localhost:8000/init/connect"
-  - SALESFORCE_CALLBACK_URL="http://localhost:8000/init/callback"
+  - ANYFETCH_API_ID = "anyfetch-id"
+  - ANYFETCH_API_ID = "anyfetch-secret"
+  - PROVIDER_URL="http://localhost:8000"
   - SALESFORCE_MAX_CONCURRENCY="5"
-deploy:
-  provider: heroku
-  api_key:
-    secure: KAchPX+cYMnGgnB2lLq3Jw37sJMeHCgPyqKwEW93H3gd6V3mXefv3ftLE0MooXsolFmtG4OoTin60XIpKWp4lkYAix6kYTQqdn23R99Ahi14Z/3NUZU/0DZ9ZMM/04jbxvecjHC6id1GLIT0rC5SB6kWoTHT9sIsOD+LBwbVH2c=
-  app: anyfetch-provider-salesforce
+  - secure: OslpGGv5H3v1wOrvIlxDt4gV1T7NYwy9lAYj1OOvq1CQ7DMZfBUTpM7sH62lAgKI5L6K1HGKibrEdEpdumCYgegWz3zDtlOgTVQzkDXaY8i+8Lk6jmjD9XWf7iq+zymdNjf7R1ZAfhxbezljdwSnJJY2oU+vekZOgJiBtsdkur8=
+  - secure: UisUDck/vFEczfscqlKMl3EyuS4aUJzD7ytRDwBX3Me2aqeySWN1Mnu83cHqkjazCLTpxAyNvopYjp1j7dtAYQX3huo96QyocL+44TyRMIcvkUlVAi8whWgk4v5ZBuL0+/1lmlUKv0YipNf1h8RxaAHWVAiu5R9qe2n6MUpg7Lk=
+  - secure: gzfPZ+ajx/XpeBnK4ioavO7JqSjSgdO/Xss+L0t/TKPLcwdSiuIgO3UjvdIiZFbIx5sx2fJ9z1KjH/yowJpthEA2l9RaS0Nf3x6Oh/G9jruLeXrzHRkz0E3nmw87WkTbramwbRWBytBU9/qxZWgScwSLgpecXN9kI3P8vwm5ObM=
