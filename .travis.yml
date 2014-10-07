@@ -1,0 +1,21 @@
+language: node_js
+services: mongodb
+node_js:
+- '0.10'
+before_script: npm install --dev
+script: npm test
+env:
+  global:
+  - secure: YyWmc2WiRcpvyjAVz2fsOlQ+C/oW4nIVF2a+H3phI9dO1D8+MC9QH+utliD9E49ykKsXuoHzsTSiL7CRiwd8qGh9bKDsaU2MgnddHxdXufhVmR07Sg21dkCjR4FmV8RSLUfYyn03yqhK9y0xGSnzThzvhFu4qHjYM+6OYCRkTO0=
+  - secure: IbLlQRECFlEvUQf0ZM5St8RCc5ULPzWwn9arXNonJyxp1p90OCcdqh9qqwzPKOnYIOlDwV9RdOI2Hg4RtCyZPaqrUOeHu66ihtTwgxqSRPZyPg7v4+4ET7O8WZrMByedsDnIARAea+YplD4vHYbSjzYCZbwD5gyMZyQ84weci8Q=
+  - SALESFORCE_ANYFETCH_ID = "anyfetch-id"
+  - SALESFORCE_ANYFETCH_SECRET = "anyfetch-secret"
+  - secure: Hr2VcZYOsCRMtIolVx2IlbWulC9M3GmLX7szJYV54RLMxH4iZ5kqfhZAKxMUH+7lZKU3k6cg9Z3JcT208IAi1yGOXEt41xfn0QOn9Lr4Q04FBWHXX+Z0cIUHjEhqXwTxyjf1HhCAqsa13ag4IcCMpR9KPRrjeEXOJ+Zf4JmW7jA=
+  - SALESFORCE_CONNECT_URL="http://localhost:8000/init/connect"
+  - SALESFORCE_CALLBACK_URL="http://localhost:8000/init/callback"
+  - SALESFORCE_MAX_CONCURRENCY="5"
+deploy:
+  provider: heroku
+  api_key:
+    secure: KAchPX+cYMnGgnB2lLq3Jw37sJMeHCgPyqKwEW93H3gd6V3mXefv3ftLE0MooXsolFmtG4OoTin60XIpKWp4lkYAix6kYTQqdn23R99Ahi14Z/3NUZU/0DZ9ZMM/04jbxvecjHC6id1GLIT0rC5SB6kWoTHT9sIsOD+LBwbVH2c=
+  app: anyfetch-provider-salesforce
