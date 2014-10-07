@@ -24,12 +24,16 @@ if(node_env === "production") {
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
+  maxConcurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 1,
 
-  // Optional params
+  salesforceId: process.env.SALESFORCE_API_ID,
+  salesforceSecret: process.env.SALESFORCE_API_SECRET,
 
   providerUrl: process.env.PROVIDER_URL,
   appId: process.env.ANYFETCH_API_ID,
   appSecret: process.env.ANYFETCH_API_SECRET,
+
+  testRefreshToken: process.env.SALESFORCE_TEST_REFRESH_TOKEN,
 
   opbeat: {
     organization_id: process.env.OPBEAT_ORGANIZATION_ID,
