@@ -24,7 +24,7 @@ if(node_env === "production") {
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  maxConcurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 1,
+  maxConcurrency: process.env.SALESFORCE_CONCURRENCY || 1,
 
   salesforceId: process.env.SALESFORCE_API_ID,
   salesforceSecret: process.env.SALESFORCE_API_SECRET,

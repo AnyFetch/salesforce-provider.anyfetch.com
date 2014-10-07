@@ -11,7 +11,7 @@ env:
   - ANYFETCH_API_ID = "anyfetch-id"
   - ANYFETCH_API_ID = "anyfetch-secret"
   - PROVIDER_URL="http://localhost:8000"
-  - SALESFORCE_MAX_CONCURRENCY="5"
+  - SALESFORCE_CONCURRENCY="5"
   - secure: OslpGGv5H3v1wOrvIlxDt4gV1T7NYwy9lAYj1OOvq1CQ7DMZfBUTpM7sH62lAgKI5L6K1HGKibrEdEpdumCYgegWz3zDtlOgTVQzkDXaY8i+8Lk6jmjD9XWf7iq+zymdNjf7R1ZAfhxbezljdwSnJJY2oU+vekZOgJiBtsdkur8=
   - secure: UisUDck/vFEczfscqlKMl3EyuS4aUJzD7ytRDwBX3Me2aqeySWN1Mnu83cHqkjazCLTpxAyNvopYjp1j7dtAYQX3huo96QyocL+44TyRMIcvkUlVAi8whWgk4v5ZBuL0+/1lmlUKv0YipNf1h8RxaAHWVAiu5R9qe2n6MUpg7Lk=
   - secure: gzfPZ+ajx/XpeBnK4ioavO7JqSjSgdO/Xss+L0t/TKPLcwdSiuIgO3UjvdIiZFbIx5sx2fJ9z1KjH/yowJpthEA2l9RaS0Nf3x6Oh/G9jruLeXrzHRkz0E3nmw87WkTbramwbRWBytBU9/qxZWgScwSLgpecXN9kI3P8vwm5ObM=
