@@ -9,9 +9,6 @@
 var dotenv = require('dotenv');
 dotenv.load();
 
-var salesforceApp = require('./salesforce_app.js');
-var mongoose = require('mongoose');
-
 // node_env can either be "development" or "production"
 var node_env = process.env.NODE_ENV || "development";
 
@@ -20,22 +17,33 @@ var node_env = process.env.NODE_ENV || "development";
 // 80 for production
 var default_port = 8000;
 if(node_env === "production") {
-  default_port = 5000;
+  default_port = 80;
 }
 
 // Exports configuration for use by app.js
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
-  mongo_url: process.env.MONGOLAB_URI || process.env.MONGO_URL || ("mongodb://localhost/provider-salesforce-" + node_env),
+  maxConcurrency: process.env.SALESFORCE_CONCURRENCY || 1,
 
-  salesforce_org: salesforceApp,
-  salesforce_callback: process.env.SALESFORCE_CALLBACK_URL,
-  salesforce_connect: process.env.SALESFORCE_CONNECT_URL,
+  salesforceId: process.env.SALESFORCE_API_ID,
+  salesforceSecret: process.env.SALESFORCE_API_SECRET,
 
-  anyfetch_id: process.env.SALESFORCE_ANYFETCH_ID,
-  anyfetch_secret: process.env.SALESFORCE_ANYFETCH_SECRET,
+  providerUrl: process.env.PROVIDER_URL,
+  appId: process.env.ANYFETCH_API_ID,
+  appSecret: process.env.ANYFETCH_API_SECRET,
 
-  max_concurrency: process.env.SALESFORCE_MAX_CONCURRENCY || 1,
-  workers: process.env.WORKERS || 2,
+  testRefreshToken: process.env.SALESFORCE_TEST_REFRESH_TOKEN,
+
+  kue: {
+    attempts: 2,
+    backoff: {delay: 20 * 1000, type: 'fixed'}
+  },
+
+  opbeat: {
+    organization_id: process.env.OPBEAT_ORGANIZATION_ID,
+    app_id: process.env.OPBEAT_APP_ID,
+    secret_token: process.env.OPBEAT_SECRET_TOKEN,
+    silent: true
+  }
 };

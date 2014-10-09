@@ -1,48 +1,38 @@
 {
   "name": "anyfetch-salesforce-provider",
   "version": "0.1.0",
-  "author": "Dartus Pierre-Marie <dartus.pierremarie@gmail.com>",
-  "contributors": [
-    {
-      "name": "Matthieu Bacconnier ",
-      "email": "matthieu.bacconnier@papiel.fr"
-    }
-  ],
+  "author": "Quentin Buathier <quentin.buathier@epitech.eu>",
   "bin": {
     "server": "./bin/server"
   },
   "scripts": {
     "start": "node ./bin/server",
-    "upload": "node ./bin/upload",
-    "test": "NODE_ENV=test mocha -R spec -t 50000",
-    "lint": "jshint lib/ test/ config/ bin/"
+    "test": "NODE_ENV=test mocha -R spec -t 25000"
   },
-  "main": "./lib/provider-salesforce",
+  "main": "./lib/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Papiel/salesforce-provider.anyfetch.com"
+    "url": "https://github.com/Anyfetch/salesforce-provider.anyfetch.com"
   },
   "keywords": [
-    "anyFetch",
+    "anyfetch",
     "provider",
     "salesforce"
   ],
   "dependencies": {
-    "async": "0.2.x",
-    "request": "2.34.x",
-    "anyfetch-provider": "^0.3.11",
-    "sspawn": "0.1.1",
-    "nforce": "0.7.x",
-    "mongoose": "3.8.x",
-    "newrelic": "1.x.x",
-    "jsforce": "1.1.x",
-    "dotenv": "^0.4.0"
+    "anyfetch-provider": "^1.1.7",
+    "async": "0.9.x",
+    "dotenv": "^0.4.0",
+    "jsforce": "^1.3.1",
+    "rarity": "^2.1.1",
+    "request": "2.37.x"
   },
   "devDependencies": {
-    "mocha": "1.18.x",
-    "should": "3.2.x",
-    "supertest": "0.10.x",
-    "jshint": "2.4.x"
+    "sinon": "^1.10.3",
+    "anyfetch": "^2.0.4",
+    "mocha": "1.20.x",
+    "should": "4.0.x",
+    "supertest": "0.13.x"
   },
   "licence": "MIT",
   "engines": {

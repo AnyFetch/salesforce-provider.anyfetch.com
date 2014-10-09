@@ -1,3 +1,4 @@
-# Salesforce anyFetch Provider
+# Provider salesforces
+> Visit http://anyfetch.com for details about AnyFetch.
 
-Anyfetch provider for informations stored in Salesforce.
+Support: `support@anyfetch.com`.
