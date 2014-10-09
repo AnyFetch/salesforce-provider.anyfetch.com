@@ -1,0 +1,41 @@
+{
+  "name": "anyfetch-salesforce-provider",
+  "version": "0.1.0",
+  "author": "Quentin Buathier <quentin.buathier@epitech.eu>",
+  "bin": {
+    "server": "./bin/server"
+  },
+  "scripts": {
+    "start": "node ./bin/server",
+    "test": "NODE_ENV=test mocha -R spec -t 25000"
+  },
+  "main": "./lib/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Anyfetch/salesforce-provider.anyfetch.com"
+  },
+  "keywords": [
+    "anyfetch",
+    "provider",
+    "salesforce"
+  ],
+  "dependencies": {
+    "anyfetch-provider": "^1.1.7",
+    "async": "0.9.x",
+    "dotenv": "^0.4.0",
+    "jsforce": "^1.3.1",
+    "rarity": "^2.1.1",
+    "request": "2.37.x"
+  },
+  "devDependencies": {
+    "sinon": "^1.10.3",
+    "anyfetch": "^2.0.4",
+    "mocha": "1.20.x",
+    "should": "4.0.x",
+    "supertest": "0.13.x"
+  },
+  "licence": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
