@@ -8,8 +8,8 @@ before_script: npm install --dev
 script: npm test
 env:
   global:
-  - ANYFETCH_API_ID = "anyfetch-id"
-  - ANYFETCH_API_ID = "anyfetch-secret"
+  - ANYFETCH_API_ID="anyfetch-id"
+  - ANYFETCH_API_SECRET="anyfetch-secret"
   - PROVIDER_URL="http://localhost:8000"
   - SALESFORCE_CONCURRENCY="5"
   - secure: OslpGGv5H3v1wOrvIlxDt4gV1T7NYwy9lAYj1OOvq1CQ7DMZfBUTpM7sH62lAgKI5L6K1HGKibrEdEpdumCYgegWz3zDtlOgTVQzkDXaY8i+8Lk6jmjD9XWf7iq+zymdNjf7R1ZAfhxbezljdwSnJJY2oU+vekZOgJiBtsdkur8=
