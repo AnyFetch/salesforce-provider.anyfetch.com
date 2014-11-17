@@ -34,7 +34,7 @@ describe("Workflow", function () {
     var originalQueueWorker = serverConfig.workers.addition;
 
     serverConfig.workers.addition = function(job, cb) {
-      var stub = sinon.stub(job.anyfetchClient, 'postDocument', function(document, cb) { 
+      var stub = sinon.stub(job.anyfetchClient, 'postDocument', function(document, cb) {
         document.should.have.property('identifier');
         document.should.have.property('creation_date');
         document.should.have.property('modification_date');
@@ -47,16 +47,13 @@ describe("Workflow", function () {
           throw err;
         }
 
+        stub.called.should.be.true;
+        stub.restore();
+
+        count += 1;
+
         cb(err);
       });
-
-      stub.called.should.be.true;
-      stub.restore();
-
-      count += 1;
-      if(count === 20) {
-        done();
-      }
     };
 
     var server = AnyFetchProvider.createServer(serverConfig.connectFunctions, serverConfig.updateAccount, serverConfig.workers, serverConfig.config);
@@ -74,5 +71,10 @@ describe("Workflow", function () {
           throw err;
         }
       });
+
+    server.usersQueue.once('empty', function() {
+      count.should.not.eql(0);
+      done();
+    });
   });
 });
