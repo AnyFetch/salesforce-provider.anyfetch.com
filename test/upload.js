@@ -31,32 +31,9 @@ describe("Workflow", function () {
 
   it("should upload data to AnyFetch", function(done) {
     var count = 0;
-    var originalQueueWorker = serverConfig.workers.addition;
 
-    serverConfig.workers.addition = function(job, cb) {
-      var stub = sinon.stub(job.anyfetchClient, 'postDocument', function(document, cb) {
-        document.should.have.property('identifier');
-        document.should.have.property('creation_date');
-        document.should.have.property('modification_date');
-
-        cb();
-      });
-
-      originalQueueWorker(job, function(err) {
-        if(err) {
-          throw err;
-        }
-
-        stub.called.should.be.true;
-        stub.restore();
-
-        count += 1;
-
-        cb(err);
-      });
-    };
-
-    var server = AnyFetchProvider.createServer(serverConfig.connectFunctions, serverConfig.updateAccount, serverConfig.workers, serverConfig.config);
+    serverConfig.config.retry = 0;
+    var server = AnyFetchProvider.createServer(serverConfig.connectFunctions, __dirname + '/workers-test.js', __dirname + '/../lib/update.js', serverConfig.config);
 
     request(server)
       .post('/update')
@@ -71,6 +48,18 @@ describe("Workflow", function () {
           throw err;
         }
       });
+
+    server.usersQueue.on('job.task.completed', function() {
+      count += 1;
+    });
+
+    server.usersQueue.on('job.task.failed', function(job, err) {
+      done(err);
+    });
+
+    server.usersQueue.on('job.update.failed', function(job, err) {
+      done(err);
+    });
 
     server.usersQueue.once('empty', function() {
       count.should.not.eql(0);
