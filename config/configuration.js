@@ -31,7 +31,9 @@ module.exports = {
   salesforceId: process.env.SALESFORCE_API_ID,
   salesforceSecret: process.env.SALESFORCE_API_SECRET,
 
+  appName: process.env.APP_NAME,
   providerUrl: process.env.PROVIDER_URL,
+
   appId: process.env.ANYFETCH_API_ID,
   appSecret: process.env.ANYFETCH_API_SECRET,
 
