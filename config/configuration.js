@@ -25,8 +25,8 @@ module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
 
-  usersConcurrency: process.env.SALESFORCE_USERS_CONCURRENCY || 1,
-  concurrency: process.env.SALESFORCE_CONCURRENCY || 1,
+  usersConcurrency: process.env.USERS_CONCURRENCY || 1,
+  concurrency: process.env.CONCURRENCY || 1,
 
   salesforceId: process.env.SALESFORCE_API_ID,
   salesforceSecret: process.env.SALESFORCE_API_SECRET,
